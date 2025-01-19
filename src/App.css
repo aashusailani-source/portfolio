@@ -1,0 +1,51 @@
+.animated-bg {
+  position: relative;
+  min-height: 100vh;
+  background: #000000;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+    #000000 0%,
+    #0a0a0a 40%,
+    #111111 50%,
+    #0a0a0a 60%,
+    #000000 100%
+  );
+  background-size: 100% 200%;
+  animation: waveMove 8s cubic-bezier(0.36, 0, 0.66, 1) infinite;
+  opacity: 0.8;
+}
+
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+    #000000 10%,
+    #0a0a0a 45%,
+    #111111 50%,
+    #0a0a0a 55%,
+    #000000 90%
+  );
+  background-size: 100% 200%;
+  animation: waveMove 8s cubic-bezier(0.36, 0, 0.66, 1) infinite reverse;
+  animation-delay: -4s;
+  opacity: 0.6;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
