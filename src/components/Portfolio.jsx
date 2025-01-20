@@ -1,6 +1,6 @@
-import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt, FaGitAlt} from 'react-icons/fa';
 import { GiSuitcase } from 'react-icons/gi'
-import { SiTailwindcss } from 'react-icons/si';
+import { SiTailwindcss, SiExpress, SiPostman } from 'react-icons/si';
 import { SiMongodb, SiMysql, SiPostgresql, SiTypescript } from 'react-icons/si';
 import projects from './Projects';
 
@@ -49,7 +49,8 @@ function Portfolio() {
         {/* Tech Stack Section */}
         <section className="w-full flex flex-col mb-8">
           <h2 className="text-3xl mb-4 text-light-gray">Tech Stack</h2>
-          <div className="flex flex-wrap gap-6 justify-start">
+          <div className="flex flex-wrap gap-3 justify-start">
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaReact className="text-2xl mr-2" />
               <p className="text-light-gray">React</p>
@@ -63,6 +64,11 @@ function Portfolio() {
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaJs className="text-2xl mr-2" />
               <p className="text-light-gray">JavaScript</p>
+            </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiExpress className="text-2xl mr-2" />
+              <p className="text-light-gray">Express.js</p>
             </div>
 
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
@@ -100,6 +106,17 @@ function Portfolio() {
               <SiTypescript className="text-2xl mr-2" />
               <p className="text-light-gray">TypeScript</p>
             </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <FaGitAlt className="text-2xl mr-2" />
+              <p className="text-light-gray">Git</p>
+            </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiPostman className="text-2xl mr-2" />
+              <p className="text-light-gray">Postman</p>
+            </div>
+
           </div>
         </section>
 
@@ -115,26 +132,28 @@ function Portfolio() {
                 <img
                   src={project.image}
                   alt={`${project.title} Screenshot`}
-                  className="rounded-md mb-4 w-full h-40 object-cover"
+                  className="rounded-md mb-4 w-full h-40 object-fill hover:scale-105 hover:shadow-lg transform transition-all duration-500 cursor-pointer"
                 />
                 <p className="text-xl text-light-gray font-semibold mb-2">{project.title}</p>
-                <p className="text-light-gray mb-4">{project.description}</p>
+                <p className="text-light-gray mb-4 text-center tracking-tighter">{project.description}</p>
                 <div className="flex justify-center gap-4">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-green-700 text-gray-300 hover:bg-green-800 transition"
+                    className="px-4 py-2 rounded-lg bg-green-700 bg-green-600 text-gray-300 hover:scale-105 hover:bg-green-800 transition-all duration-300"
                   >
-                    Live Demo
+                    <span className="text">Live Demo</span>
+                    <span className="hover-text">Click Here!</span>
                   </a>
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-900 transition"
+                    className="border-2 border-gray-800 rounded-lg px-3 py-2 bg-gray-900 text-gray-200 cursor-pointer hover:bg-gray-800 hover:text-gray-200 transform transition-all"
                   >
-                    Source Code
+                    <span className="text">Source Code</span>
+                    <span className="hover-text">Click Here!</span>
                   </a>
                 </div>
               </div>

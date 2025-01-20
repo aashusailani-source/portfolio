@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     title: "EzyEats",
-    description: "A description of Project 1 goes here. This project uses various technologies.",
+    description: "EzyEats is a food delivery platform that lets customers browse menus, place orders, and track deliveries, with secure payments powered by Stripe. Admins can manage orders and update menus through a simple dashboard",
     image: ezyeatsImage, // Using the imported image
     liveLink: "https://ezyeats-client.onrender.com",
     githubLink: "https://github.com/aashusailani-source/ezyeats",
@@ -15,7 +15,7 @@ const projects = [
   {
     id: 2,
     title: "NexChat",
-    description: "A description of Project 2 goes here. This project uses different technologies.",
+    description: "NexChat is a real-time chat application powered by Socket.io, allowing users to instantly send and receive messages. With its seamless interface, users can engage in private and group chats, ensuring real-time communication.",
     image: nexChatImage, // Using the imported image
     liveLink: "https://dev-projects-stack-monorepo-9rr7.vercel.app/",
     githubLink: "https://github.com/aashusailani-source/dev-projects-stack-monorepo/tree/main/blog-app",
@@ -23,7 +23,7 @@ const projects = [
   {
     id: 3,
     title: "BlogApp",
-    description: "A description of Project 3 goes here. This project utilizes cutting-edge technologies.",
+    description: "BlogApp is a blogging platform with secure user authentication, allowing users to sign up, log in, and manage their posts. With a user-friendly interface, users can create, edit, and delete blog posts, all while enjoying a secure, personalized experience.",
     image: blogAppImage, // Using the imported image
     liveLink: "https://chatapplication-3zbe.onrender.com",
     githubLink: "https://github.com/aashusailani-source/chatApplication",
