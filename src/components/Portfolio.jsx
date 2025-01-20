@@ -1,10 +1,11 @@
-import React from 'react';
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt} from 'react-icons/fa';
 import { GiSuitcase } from 'react-icons/gi'
 import { SiTailwindcss } from 'react-icons/si';
 import { SiMongodb, SiMysql, SiPostgresql, SiTypescript } from 'react-icons/si';
+import projects from './Projects';
 
 function Portfolio() {
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 select-none">
       {/* Main container with responsive width */}
@@ -37,10 +38,10 @@ function Portfolio() {
             </div>
           </div>
 
-          <p className="text-lg text-justify text-light-gray mt-4">
+          <p className="text-lg text-justify text-light-gray mt-4 tracking-tight">
             I am a passionate Full Stack Developer skilled in creating robust and dynamic web applications. With expertise in frontend and backend technologies, I specialize in delivering user-friendly and efficient solutions that cater to diverse needs. 
           </p>
-          <p className="text-lg text-justify text-light-gray mt-4">
+          <p className="text-lg text-justify text-light-gray mt-4 tracking-tight">
             While I am currently focused on full-stack development, I am enthusiastic about exploring new domains such as Web3 and DevOps in the future to further expand my skill set.
           </p>
         </header>
@@ -105,25 +106,39 @@ function Portfolio() {
         {/* Projects Section */}
         <section className="w-full mb-8">
           <h2 className="text-3xl mb-4 text-light-gray">Projects</h2>
-
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
-            {/* Project 1 */}
-            <div className="project-item p-6 rounded-lg shadow-lg w-full text-center backdrop-blur-lg bg-black/60 bg-opacity-40 border border-white/20">
-              <p className="text-lg text-light-gray">Project 1</p>
-              <p className="text-light-gray">A description of Project 1 goes here. This project uses various technologies.</p>
-            </div>
-
-            {/* Project 2 */}
-            <div className="project-item p-6 rounded-lg shadow-lg w-full text-center backdrop-blur-lg bg-black/60 bg-opacity-40 border border-white/20">
-              <p className="text-lg text-light-gray">Project 2</p>
-              <p className="text-light-gray">A description of Project 2 goes here. This project uses different technologies.</p>
-            </div>
-
-            {/* Project 3 */}
-            <div className="project-item p-6 rounded-lg shadow-lg w-full text-center backdrop-blur-lg bg-black/60 bg-opacity-40 border border-white/20">
-              <p className="text-lg text-light-gray">Project 3</p>
-              <p className="text-light-gray">A description of Project 3 goes here. This project utilizes cutting-edge technologies.</p>
-            </div>
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="project-item p-6 rounded-lg shadow-lg w-full text-center backdrop-blur-lg bg-opacity-50 border border-white/20"
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} Screenshot`}
+                  className="rounded-md mb-4 w-full h-40 object-cover"
+                />
+                <p className="text-xl text-light-gray font-semibold mb-2">{project.title}</p>
+                <p className="text-light-gray mb-4">{project.description}</p>
+                <div className="flex justify-center gap-4">
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg bg-green-700 text-gray-300 hover:bg-green-800 transition"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg bg-gray-800 text-gray-300 hover:bg-gray-900 transition"
+                  >
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
