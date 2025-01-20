@@ -1,6 +1,8 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt} from 'react-icons/fa';
+import { GiSuitcase } from 'react-icons/gi'
 import { SiTailwindcss } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiPostgresql, SiTypescript } from 'react-icons/si';
 
 function Portfolio() {
   return (
@@ -10,7 +12,31 @@ function Portfolio() {
         
         {/* Header with updated name and description */}
         <header className="mb-6 flex flex-col justify-center items-center text-center w-full">
-          <h1 className="text-4xl font-bold text-light-gray">Aashu Sailani</h1>
+          <h1 className="text-6xl mb-5 font-bold text-light-gray">Aashu Sailani</h1>
+
+          {/* Icon inside a small circle with opacity */}
+          <div className="flex items-center justify-center gap-5 p-4 h-8 rounded-full bg-green-500 bg-opacity-25 mb-2">
+            <GiSuitcase className="text-2xl animate-blink text-green-200" />
+            <p className="text-lg italic text-green-400 opacity-75">Actively looking for new roles</p>
+          </div>
+
+          {/* Actively looking for new roles */}
+
+          {/* Role */}
+          <div className="flex flex-row justify-between items-start w-full mt-4">
+            <p className="text-lg text-gray-400">Profession</p>
+            <p className="text-lg italic text-gray-400">Software Engineer</p>
+          </div>
+
+          {/* Education Section */}
+          <div className="flex flex-row justify-between items-center w-full mt-4">
+            <p className="text-lg text-gray-400">Education</p>
+            <div className='flex flex-col items-end'>
+              <p className="text-lg italic text-gray-400">Bachelor Of Technology</p>
+              <p className="text-lg italic text-gray-400">Computer Science and Engineering</p>
+            </div>
+          </div>
+
           <p className="text-lg text-justify text-light-gray mt-4">
             I am a passionate Full Stack Developer skilled in creating robust and dynamic web applications. With expertise in frontend and backend technologies, I specialize in delivering user-friendly and efficient solutions that cater to diverse needs. 
           </p>
@@ -27,27 +53,52 @@ function Portfolio() {
               <FaReact className="text-2xl mr-2" />
               <p className="text-light-gray">React</p>
             </div>
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaNodeJs className="text-2xl mr-2" />
               <p className="text-light-gray">Node.js</p>
             </div>
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaJs className="text-2xl mr-2" />
               <p className="text-light-gray">JavaScript</p>
             </div>
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaHtml5 className="text-2xl mr-2" />
               <p className="text-light-gray">HTML</p>
             </div>
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <FaCss3Alt className="text-2xl mr-2" />
               <p className="text-light-gray">CSS</p>
             </div>
+
             <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
               <SiTailwindcss className="text-2xl mr-2" />
               <p className="text-light-gray">Tailwind CSS</p>
             </div>
-            {/* Add more tech stack items as needed */}
+
+            {/* New tech stack items */}
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiMongodb className="text-2xl mr-2" />
+              <p className="text-light-gray">MongoDB</p>
+            </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiMysql className="text-2xl mr-2" />
+              <p className="text-light-gray">MySQL</p>
+            </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiPostgresql className="text-2xl mr-2" />
+              <p className="text-light-gray">PostgreSQL</p>
+            </div>
+
+            <div className="flex items-center h-10 bg-zinc-900/50 px-4 rounded-md border border-zinc-800 transform transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg">
+              <SiTypescript className="text-2xl mr-2" />
+              <p className="text-light-gray">TypeScript</p>
+            </div>
           </div>
         </section>
 
