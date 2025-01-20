@@ -33,7 +33,7 @@ function Portfolio() {
             <p className="text-base md:text-lg lg:text-xl text-gray-400">Education</p>
             <div className='flex flex-col items-end'>
               <p className="text-base md:text-lg lg:text-xl italic text-gray-400">Bachelor Of Technology</p>
-              <p className="text-base md:text-lg lg:text-xl italic text-gray-400">Computer Science and Engineering</p>
+              <p className="text-base md:text-lg lg:text-xl max-w-40 md:max-w-full lg:max-w-full italic text-end text-gray-400">Computer Science and Engineering</p>
             </div>
           </div>
 
