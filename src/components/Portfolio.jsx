@@ -12,28 +12,28 @@ function Portfolio() {
         
         {/* Header with updated name and description */}
         <header className="mb-6 flex flex-col justify-center items-center text-center w-full">
-          <h1 className="text-6xl mb-5 font-bold text-light-gray">Aashu Sailani</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mb-5 font-bold text-light-gray">Aashu Sailani</h1>
 
           {/* Icon inside a small circle with opacity */}
           <div className="flex items-center justify-center gap-5 p-4 h-8 rounded-full bg-green-500 bg-opacity-25 mb-2">
             <GiSuitcase className="text-2xl animate-blink text-green-200" />
-            <p className="text-lg italic text-green-400 opacity-75">Actively looking for new roles</p>
+            <p className="text-base md:text-lg lg:text-xl italic text-green-400 opacity-75">Actively looking for new roles</p>
           </div>
 
           {/* Actively looking for new roles */}
 
           {/* Role */}
           <div className="flex flex-row justify-between items-start w-full mt-4">
-            <p className="text-lg text-gray-400">Profession</p>
-            <p className="text-lg italic text-gray-400">Software Engineer</p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-400">Profession</p>
+            <p className="text-base md:text-lg lg:text-xl italic text-gray-400">Software Engineer</p>
           </div>
 
           {/* Education Section */}
           <div className="flex flex-row justify-between items-center w-full mt-4">
-            <p className="text-lg text-gray-400">Education</p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-400">Education</p>
             <div className='flex flex-col items-end'>
-              <p className="text-lg italic text-gray-400">Bachelor Of Technology</p>
-              <p className="text-lg italic text-gray-400">Computer Science and Engineering</p>
+              <p className="text-base md:text-lg lg:text-xl italic text-gray-400">Bachelor Of Technology</p>
+              <p className="text-base md:text-lg lg:text-xl italic text-gray-400">Computer Science and Engineering</p>
             </div>
           </div>
 
