@@ -39,10 +39,10 @@ function Portfolio() {
           </div>
 
           <p className="text-lg text-justify text-light-gray mt-4 tracking-tight">
-            I am a passionate Full Stack Developer skilled in creating robust and dynamic web applications. With expertise in frontend and backend technologies, I specialize in delivering user-friendly and efficient solutions that cater to diverse needs. 
+            I’m a Full Stack Developer with expertise in both frontend and backend technologies. I specialize in building dynamic, user-friendly, and efficient web applications, ensuring seamless performance across all layers of development.
           </p>
           <p className="text-lg text-justify text-light-gray mt-4 tracking-tight">
-            While I am currently focused on full-stack development, I am enthusiastic about exploring new domains such as Web3 and DevOps in the future to further expand my skill set.
+            While my current focus is on full-stack development, I am eager to explore new areas like Web3, DevOps, and Cloud Computing in the future to broaden my knowledge and skills.
           </p>
         </header>
 
@@ -141,10 +141,10 @@ function Portfolio() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-green-700 bg-green-600 text-gray-300 hover:scale-105 hover:bg-green-800 transition-all duration-300"
+                    className="px-4 py-2 rounded-lg bg-green-600 text-gray-300 hover:scale-105 hover:bg-green-800 transition-all duration-300"
                   >
-                    <span className="text">Live Demo</span>
-                    <span className="hover-text">Click Here!</span>
+                    <span className="text transform transition-all duration-500">Live Demo</span>
+                    <span className="hover-text transform transition-all duration-500">Click Here!</span>
                   </a>
                   <a
                     href={project.githubLink}
@@ -152,8 +152,8 @@ function Portfolio() {
                     rel="noopener noreferrer"
                     className="border-2 border-gray-800 rounded-lg px-3 py-2 bg-gray-900 text-gray-200 cursor-pointer hover:bg-gray-800 hover:text-gray-200 transform transition-all"
                   >
-                    <span className="text">Source Code</span>
-                    <span className="hover-text">Click Here!</span>
+                    <span className="text transform transition-all duration-500">Source Code</span>
+                    <span className="hover-text transform transition-all duration-500">Click Here!</span>
                   </a>
                 </div>
               </div>
