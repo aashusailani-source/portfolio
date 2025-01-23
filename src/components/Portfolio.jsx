@@ -95,25 +95,19 @@ function Portfolio() {
 
           </div>
 
-          <div className='w-full flex'>
-            <div className="flex items-center justify-center gap-5 p-4 h-8 rounded-lg bg-green-400 bg-opacity-15 mb-8">
+          <div className='w-full flex flex-row justify-between items-center mb-8'>
+            <div className="flex items-center justify-center gap-5 p-4 h-8 rounded-lg bg-green-400 bg-opacity-15">
               <GiSuitcase className="text-2xl animate-blink text-green-200" />
               <p className="text-base md:text-lg lg:text-xl italic text-green-400 opacity-75">
                 Actively looking for new roles
               </p>
             </div>
             
-            <div
-              onClick={() => window.open('/resume.pdf', '_blank')}
-              className="flex items-center justify-center cursor-pointer bg-gradient-to-r from-blue-500 to-blue-700 text-white font-medium rounded-lg p-4 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
-              <span>Download resume</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                className="w-6 h-6 mx-2">
-                <path d="M12 16l-4-4h3V4h2v8h3l-4 4zm-8 2v2h16v-2H4z" />
-              </svg>
+            {/* Download Resume button */}
+            <div className='px-3 py-1 bg-slate-700 rounded-xl hover:border-blue-950 hover:bg-blue-900 opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open('../../public/aashusailani_resume.pdf', '_blank')}>
+              <button>
+                Download Resume
+              </button>
             </div>
 
 
