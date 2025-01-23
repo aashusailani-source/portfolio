@@ -112,9 +112,9 @@ function Portfolio() {
 
           <div className='w-full flex gap-y-3 flex-wrap md:flex-row justify-between items-center mb-8'>
             <div className="flex items-center justify-center gap-3 md:gap-5 md:p-4
-            lg:p-4 sm:p-3 p-3 h-[0.5px] sm:h-2 md:h-8 lg:h-8 rounded-lg bg-green-400 bg-opacity-15">
+            lg:p-4 sm:p-3 py-[3px] px-[5px] sm:h-2 md:h-8 lg:h-8 rounded-lg bg-green-400 bg-opacity-15">
               <GiSuitcase className="text-xl md:text-2xl animate-blink text-green-200" />
-              <p className="text-xs md:text-sm lg:text-lg italic text-green-400 opacity-75 font-bold lg:font-normal">
+              <p className="text-xs md:text-sm lg:text-lg italic flex flex-wrap text-green-400 opacity-75 font-bold lg:font-normal">
                 Actively looking for new roles
               </p>
             </div>
@@ -126,8 +126,8 @@ function Portfolio() {
               </button>
             </div> */}
 
-            <div className='md:mt-0 bg-slate-900 border-red-900 hover:scale-105 border rounded-lg font-normal hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open('/aashusailani_resume.pdf', '_blank')}>
-              <button className='text-sm px-3 h-[0.5px] sm:h-2 md:h-8 lg:h-8 rounded-lg hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
+            <div className='md:mt-0 bg-slate-950 border-red-900 hover:scale-105 border-2 rounded-lg font-normal hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open(`https://www.dropbox.com/scl/fi/7hee33eautbonvsfl0qzq/Aashu_Sailani_Resume.pdf?rlkey=97fyfbao3h5m8tyn9jbhlw38x&st=p2ckqezh&dl=0`, '_blank')}>
+              <button className='text-[11px] py-[3px] px-[8px] text-center h-[5px] sm:h-2 md:h-8 lg:h-8 hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
                 View Resume
               </button>
             </div>
