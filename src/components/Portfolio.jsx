@@ -126,18 +126,11 @@ function Portfolio() {
               </button>
             </div> */}
 
-            <a
-              href="/aashusailani_resume.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-gray-800 rounded-lg px-3 py-2 bg-gray-950 text-gray-200 cursor-pointer hover:bg-gray-800 hover:text-gray-200 transform transition-all">
-              <span className="text transform transition-all duration-500">
-                Download Resume
-              </span>
-              <span className="hover-text transform transition-all duration-500">
-                Click Here!
-              </span>
-            </a>
+            <div className='md:mt-0 bg-slate-900 border-red-900 hover:scale-105 border-2 rounded-xl hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open('../../public/aashusailani_resume.pdf', '_blank')}>
+              <button className='text-sm px-3 py-1 h-full rounded-xl hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
+                View Resume
+              </button>
+            </div>
 
           </div>
 
@@ -168,20 +161,22 @@ function Portfolio() {
           </div>
 
 
-          <p className="text-lg text-justify text-light-gray mt-4">
+          <p className="text-base md:text-lg lg:text-lg text-justify text-light-gray mt-4">
             I’m a Full Stack Developer with expertise in both frontend and
             backend technologies. I specialize in building dynamic,
             user-friendly, and efficient web applications, ensuring seamless
             performance across all layers of development.
           </p>
-          <p className="text-lg text-justify text-light-gray mt-4">
+          <p className="text-base md:text-lg lg:text-lg text-justify text-light-gray mt-4">
             While my current focus is on full-stack development, I am eager to
             explore new areas like Web3, DevOps, and Cloud Computing in the
             future to broaden my knowledge and skills.
           </p>
         </header>
         <section className="w-full flex flex-col mb-8">
-          <h2 className="text-3xl mb-4 text-light-gray">Tech Stack</h2>
+          <h2 className="text-4xl flex font-bold mb-4 text-light-gray">
+            <span className='hover:underline transition-all duration-300'>Tech Stack</span>
+          </h2>
           <div className="flex flex-wrap gap-3 justify-start">
             {[
               { Icon: FaReact, label: 'React' },
@@ -208,23 +203,47 @@ function Portfolio() {
             ))}
           </div>
         </section>
+
         <section className="w-full mb-8">
-          <h2 className="text-3xl mb-4 text-light-gray">Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-light-gray">
+            <span className='hover:underline transition-all duration-300'>Projects</span>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="project-item p-6 rounded-lg shadow-lg w-full text-start backdrop-blur-lg bg-opacity-50 border border-white/20"
+                className="project-item p-5 rounded-lg shadow-lg w-full text-start backdrop-blur-lg bg-opacity-50 border border-white/20"
               >
-                <img
+                {/* <img
                   src={project.image}
                   alt={`${project.title} Screenshot`}
                   className="rounded-md mb-4 w-full h-40 object-fill hover:scale-105 hover:shadow-lg transform transition-all duration-500 cursor-pointer"
-                />
+                /> */}
+
+                <div className="relative w-full p-0 h-48 overflow-hidden rounded-md mb-4">
+                          {/* Video preview on hover */}
+                  <video
+                    src={project.video} // Reference to the video file in the public folder
+                    poster={project.image} // Fallback image as a thumbnail
+                    className="w-full h-full object-contain cursor-pointer"
+                    onMouseEnter={(e) => {
+                      e.target.play();
+                      e.target.playbackRate = 2;
+                    }} // Play video on hover
+                    onMouseLeave={(e) => {
+                      e.target.pause(); // Pause video on mouse leave
+                      e.target.currentTime = 0;
+                      e.target.load(); // Reset video to the start
+                    }}
+                    muted // Mute video for preview
+                    loop={false} // Optional: Loop the video during hover
+                          />
+                 </div>
+
                 <p className="text-2xl text-light-gray font-semibold mb-2">
                   {project.title}
                 </p>
-                <p className="text-light-gray mb-4 text-start tracking-wider">
+                <p className="text-light-gray text-base md:text-lg lg:text-lg mb-4 text-start tracking-wider">
                   {project.description}
                 </p>
                 <div className="flex justify-start items-center gap-4">
@@ -258,6 +277,7 @@ function Portfolio() {
             ))}
           </div>
         </section>
+
       </div>
     </div>
   );
