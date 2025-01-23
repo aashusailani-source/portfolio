@@ -126,7 +126,7 @@ function Portfolio() {
               </button>
             </div> */}
 
-            <div className='md:mt-0 bg-slate-900 border-red-900 hover:scale-105 border-2 rounded-xl hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open('../../public/aashusailani_resume.pdf', '_blank')}>
+            <div className='md:mt-0 bg-slate-900 border-red-900 hover:scale-105 border-2 rounded-xl hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open('/aashusailani_resume.pdf', '_blank')}>
               <button className='text-sm px-3 py-1 h-full rounded-xl hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
                 View Resume
               </button>
