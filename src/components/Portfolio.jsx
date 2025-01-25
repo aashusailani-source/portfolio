@@ -36,7 +36,7 @@ function Portfolio() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 select-none">
       <div
-        className={`z-10 text-white tracking-wider flex flex-col font-light items-center max-w-3xl px-6 py-8 sm:py-12 lg:pt-24 mx-auto transition-all duration-700 ${
+        className={`z-10 text-white flex flex-col font-light items-center max-w-3xl px-6 py-8 sm:py-12 lg:pt-24 mx-auto transition-all duration-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -126,7 +126,13 @@ function Portfolio() {
               </button>
             </div> */}
 
-            <div className='md:mt-0 bg-slate-950 border-red-900 hover:scale-105 border-2 rounded-lg font-normal hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open(`https://www.dropbox.com/scl/fi/7hee33eautbonvsfl0qzq/Aashu_Sailani_Resume.pdf?rlkey=97fyfbao3h5m8tyn9jbhlw38x&st=p2ckqezh&dl=0`, '_blank')}>
+            {/* <div className='md:mt-0 bg-slate-950 border-red-900 hover:scale-105 border-2 rounded-lg font-normal hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open(`https://www.dropbox.com/scl/fi/7hee33eautbonvsfl0qzq/Aashu_Sailani_Resume.pdf?rlkey=97fyfbao3h5m8tyn9jbhlw38x&st=p2ckqezh&dl=0`, '_blank')}>
+              <button className='text-[11px] py-[3px] px-[8px] text-center h-[5px] sm:h-2 md:h-8 lg:h-8 hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
+                View Resume
+              </button>
+            </div> */}
+
+            <div className='md:mt-0 bg-slate-950 border-red-900 hover:scale-105 border-2 rounded-lg font-normal hover:border-blue-950 hover:bg-black opacity-70 text-slate-100 transition-all duration-300' onClick={() => window.open(`https://drive.google.com/file/d/1NPTUpK7M_YvENTvL95sLWxIzFTLcTCO0/view?usp=sharing`, '_blank')}>
               <button className='text-[11px] py-[3px] px-[8px] text-center h-[5px] sm:h-2 md:h-8 lg:h-8 hover:bg-opacity-0 w-full cursor-pointe md:text-base'>
                 View Resume
               </button>
