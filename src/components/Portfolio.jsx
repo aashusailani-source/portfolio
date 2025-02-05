@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   FaReact,
   FaNodeJs,
@@ -6,9 +6,6 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaGitAlt,
-  FaTwitter,
-  FaGithub,
-  FaLinkedin,
 } from 'react-icons/fa';
 import { GiSuitcase } from 'react-icons/gi';
 import {
